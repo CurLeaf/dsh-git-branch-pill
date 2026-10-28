@@ -1,0 +1,5 @@
+# Bundle layer of `dsh-git-branch-pill`: one Host row whose package also declares
+# a browser module (`dsh.client`), so the row carries both halves.
+- insert:
+    - id: git-branch-pill
+      name: dsh-git-branch-pill

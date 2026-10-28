@@ -1,0 +1,63 @@
+{
+  "name": "dsh-git-branch-pill",
+  "version": "0.1.0",
+  "description": "Composer dock pill showing the Git branch of the Session's working directory.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "exports": {
+    ".": "./dist/index.js",
+    "./client": "./dist/client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ]
+    }
+  },
+  "files": [
+    "dist",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20.9.0"
+  },
+  "scripts": {
+    "test": "node --test \"test/*.test.mjs\""
+  },
+  "license": "MIT",
+  "author": "curleaf",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "git",
+    "branch",
+    "composer",
+    "status-bar"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CurLeaf/dsh-git-branch-pill.git"
+  },
+  "homepage": "https://github.com/CurLeaf/dsh-git-branch-pill#readme",
+  "bugs": {
+    "url": "https://github.com/CurLeaf/dsh-git-branch-pill/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

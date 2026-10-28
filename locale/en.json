@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Git Branch Pill",
+    "description": "Shows the Git branch of the Session's working directory in the composer dock."
+  }
+}
