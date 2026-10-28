@@ -33,14 +33,15 @@ dist/client.js  浏览器半：往 conversation.composer.dock 注册 order=2 的
 Host 半只跑只读命令（`symbolic-ref` / `rev-parse`），带 `GIT_OPTIONAL_LOCKS=0`，不碰工作区。
 浏览器半从会话列表读 `cwd`，所以多个会话视图共用一份按路径的缓存，不会一次渲染跑一次 git。
 
-## 安装（profile 内）
+## 安装
 
 ```bash
-# 1) 装进 profile（本地目录用 link:）
-dsh plugin --profile web add link:/home/yxw/WorkSpace/dsh-git-branch-pill
+# 1) 装进 profile（registry 直接用包名；本地改代码时用 link:）
+dsh plugin --profile web add dsh-git-branch-pill
+# dsh plugin --profile web add link:/path/to/dsh-git-branch-pill
 
-# 2) 把包名加进 ~/.dsh/profiles/web/package.json 的 dsh.profile.bundles
-#    （bundle 的 cordis.patch.yml 自己声明 insert 行，用户层 patch 不用动）
+# 2) 包名会记进 ~/.dsh/profiles/web/package.json 的 dsh.profile.bundles，
+#    bundle 自己的 cordis.patch.yml 声明 insert 行，用户层 patch 不用动
 
 # 3) 浏览器刷新页面
 ```
